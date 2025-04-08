@@ -156,6 +156,72 @@
       </div>
     </div>
 
+    <!--Teste -->
+    <div class="teste-foco">
+      <h1>Teste seu nível de foco</h1>
+      <h6>Responda as perguntas abaixo e descubra seu nível de foco.</h6>
+      <p class="descricao">
+        O teste é uma ferramenta simples e rápida para ajudar você a entender
+        melhor seu nível de foco e identificar áreas que podem ser melhoradas.
+        Lembre-se de que o resultado não substitui uma avaliação profissional.
+      </p>
+      <div class="container-test">
+        <h1>🧠 Teste de Nível de Foco</h1>
+        <p class="intro">Selecione a frequência com que você sente cada um dos sintomas abaixo. Cada opção tem uma pontuação de 0 (Nunca) a 4 (Sempre).</p>
+        <form id="formulario">
+          <div class="pergunta">
+            <label>1. Com que frequência você se distrai com notificações ou sons ao seu redor?</label>
+            <select>
+              <option value="0">Nunca (0 ponto)</option>
+              <option value="1">Raramente (1 ponto)</option>
+              <option value="2">Às vezes (2 pontos)</option>
+              <option value="3">Frequentemente (3 pontos)</option>
+              <option value="4">Sempre (4 pontos)</option>
+            </select>
+          </div>
+          <div class="pergunta">
+            <label>2. Você sente dificuldade em manter a atenção durante uma leitura ou conversa?</label>
+            <select>
+              <option value="0">Nunca (0 ponto)</option>
+              <option value="1">Raramente (1 ponto)</option>
+              <option value="2">Às vezes (2 pontos)</option>
+              <option value="3">Frequentemente (3 pontos)</option>
+              <option value="4">Sempre (4 pontos)</option>
+            </select>
+          </div>
+          <div class="pergunta">
+            <label>3. Você costuma esquecer compromissos, tarefas ou datas importantes?</label>
+            <select>
+              <option value="0">Nunca (0 ponto)</option>
+              <option value="1">Raramente (1 ponto)</option>
+              <option value="2">Às vezes (2 pontos)</option>
+              <option value="3">Frequentemente (3 pontos)</option>
+              <option value="4">Sempre (4 pontos)</option>
+            </select>
+          </div>
+          <div class="pergunta">
+            <label>4. Você sente sua mente acelerada ou agitada na maior parte do tempo?</label>
+            <select>
+              <option value="0">Nunca (0 ponto)</option>
+              <option value="1">Raramente (1 ponto)</option>
+              <option value="2">Às vezes (2 pontos)</option>
+              <option value="3">Frequentemente (3 pontos)</option>
+              <option value="4">Sempre (4 pontos)</option>
+            </select>
+          </div>
+          <button type="submit">Ver resultado</button>
+        </form>
+        <div class="resultado" id="resultado"></div>
+        <strong>
+          Baseado em critérios do DSM-5 e estudos sobre TDAH e ansiedade.<br>
+          Fontes: Associação Americana de Psiquiatria, Mayo Clinic, Hospital Israelita Albert Einstein.
+        </strong>
+      </div>
+    </div>
+    </div>
+    
+
+
     <!--Rodape-->
     <footer id="footer">
       <div class="footer-content">
@@ -165,8 +231,9 @@
           id="logo-footer"
         />
         <h2>AutoCtrl</h2>
-        <p>Desenvolvido por: <strong>Gustavo Lima</strong></p>
+        <p>Desenvolvido por: Gustavo Lima</p>
         <p>&copy; 2025 AutoCtrl. Todos os direitos reservados.</p>
+        <p>Versão 1.0</p>
       </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -175,6 +242,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
     <script src="script.js"></script>
   </body>

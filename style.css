@@ -4,6 +4,27 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  font-size: 16px; /* Tamanho da fonte padrão */
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* Largura da barra de rolagem */
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d00ee9; /* Cor do polegar da barra de rolagem */
+  border-radius: 10px; /* Bordas arredondadas do polegar */
+}
+::-webkit-scrollbar-track {
+  background-color: #f3f4f6; /* Cor do fundo da barra de rolagem */
+  border-radius: 10px; /* Bordas arredondadas do fundo */
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d00ee9; /* Cor do polegar ao passar o mouse */
+}
+
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #ffffff;
@@ -142,6 +163,7 @@ a:hover {
   #hamburger {
     border-top: 2px solid;
     width: 20px;
+    margin-top: -15px;
   }
 
   #hamburger::after,
@@ -170,7 +192,7 @@ a:hover {
   }
 
   #logo {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
   }
 }
 
@@ -208,11 +230,9 @@ a:hover {
   height: 450px;
 }
 
-.banner h4 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  font-family: "Exo 2", serif;
-  font-weight: 400;
+.banner img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
 }
 
 .banner .descricao {
@@ -241,21 +261,32 @@ a:hover {
 
 @media screen and (max-width: 768px) {
   .banner h1 {
-    font-size: 5em;
+    font-size: 1em;
   }
 
-  .banner h4 {
-    font-size: 1.5em;
-  }
-
-  .banner p {
-    font-size: 1.2em;
+  .banner img {
+    width: 300px;
+    height: 300px;
   }
 
   .banner-btn {
     font-size: 1em;
   }
 
+  .botoes a {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+
+  .banner .descricao {
+    margin: 2px 0;
+    font-size: 1em;
+    line-height: 1.4;
+  }
+
+  .banner-content {
+    padding: 20px;
+  }
   .banner {
     height: 90vh;
   }
@@ -363,6 +394,14 @@ a:hover {
     flex-direction: column; /* Alinha os elementos em coluna */
     align-items: center; /* Centraliza os elementos */
   }
+  .conteudo {
+    padding: 20px; /* Reduz o padding em telas menores */
+    max-width: 350px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o container */
+    margin-top: 20px; /* Espaçamento acima do conteúdo */
+    margin-bottom: 20px; /* Espaçamento abaixo do conteúdo */
+  }
+
 }
 
 
@@ -432,18 +471,40 @@ a:hover {
   .sintomas-container {
     padding: 20px; /* Reduz o padding em telas menores */
   }
-
   .sintomas h1 {
     font-size: 2em; /* Reduz o tamanho da fonte do título */
-  }
-
-  .sintomas p {
-    font-size: 1em; /* Reduz o tamanho da fonte do parágrafo */
   }
 
   .sintomas{
     flex-direction: column; /* Alinha os elementos em coluna */
     align-items: center; /* Centraliza os elementos */
+    margin: 0 auto; /* Centraliza o container */
+    margin-top: 20px; /* Espaçamento acima do conteúdo */
+    margin-bottom: 20px; /* Espaçamento abaixo do conteúdo */
+    gap: 20px; /* Espaçamento entre os elementos */
+    max-width: 350px; /* Largura máxima do conteúdo */
+  }
+
+  .sintomas-tdha, .sintomas-ansiedade {
+    padding: 20px; /* Reduz o padding em telas menores */
+    max-width: 350px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o container */
+    margin-top: 20px; /* Espaçamento acima do conteúdo */
+    margin-bottom: 20px; /* Espaçamento abaixo do conteúdo */
+  }
+
+  .sintomas h2 {
+    font-size: 1.5em; /* Reduz o tamanho da fonte do título */
+  }
+  .sintomas p {
+    font-size: 0.9em; /* Reduz o tamanho da fonte do parágrafo */
+  }
+
+  .sintomas li {
+    font-size: 0.9em; /* Reduz o tamanho da fonte do parágrafo */
+  }
+  .sintomas ul {
+    font-size: 0.9em; /* Reduz o tamanho da fonte do parágrafo */
   }
   
 }
@@ -482,6 +543,217 @@ a:hover {
 }
 
 
+
+
+
+/* Teste */
+
+.teste-foco {
+  background-color: #170f2c; /* Cor de fundo do container */
+  padding: 60px;
+  color: #fff; /* Cor do texto */
+}
+
+.teste-foco h1 {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #ffffff; /* Rosa claro para o título */
+}
+
+.teste-foco h6 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #f472b6; /* Rosa claro para o título */
+}
+
+.teste-foco p {
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #e2e8f0; /* Cinza claro para boa leitura */
+  font-size: 1.5em; /* Aumenta o tamanho da fonte */
+}
+
+
+.container-test {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 90px; /* Espaçamento abaixo do conteúdo */
+  gap: 20px;
+}
+
+.container-test h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #f472b6; /* Rosa claro para o título */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+p.intro {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.pergunta {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 5px;
+  background-color: #f3f4f6;
+  color: #000;
+  font-size: 1rem;
+}
+
+select option {
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 8px;
+}
+select:focus {
+  outline: none;
+  border: 2px solid #d00ee9;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #ea00ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #590061;
+}
+
+.resultado {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #1f2937;
+  display: none;
+}
+
+
+
+@media (max-width: 600px) {
+  .mensagem-resultado {
+    font-size: 1.2rem;
+  }
+
+  .titulo-resultado {
+    font-size: 1.5rem;
+  }
+
+  #baixarPDF {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+.dica {
+  margin-top: 10px;
+  font-style: italic;
+  color: #d1d5db;
+  text-align: center;
+}
+
+strong {
+  text-align: center;
+  font-size: 0.75rem;
+  margin-top: 20px;
+  color: #d1d5db;
+  font-weight: bold;
+  display: block;
+}
+
+
+@media screen and (max-width: 760px) {
+  .teste-foco h1{
+    font-size: 2em; /* Reduz o tamanho da fonte do título */
+  }
+
+  .teste-foco p {
+    font-size: 1em; /* Reduz o tamanho da fonte do parágrafo */
+  }
+  .teste-foco {
+    flex-direction: column; /* Alinha os elementos em coluna */
+    align-items: center; /* Centraliza os elementos */
+  }
+
+  .container-test {
+    padding: 5px; /* Reduz o padding em telas menores */
+    max-width: 350px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o container */
+    margin-top: 20px; /* Espaçamento acima do conteúdo */
+    margin-bottom: 20px; /* Espaçamento abaixo do conteúdo */
+    flex-direction: column; /* Alinha os elementos em coluna */
+    align-items: center; /* Centraliza os elementos */
+  }
+
+  .container-test h1 {
+    font-size: 1em; /* Reduz o tamanho da fonte do título */
+  }
+
+  .container-test p {
+    font-size: 0.8em; /* Reduz o tamanho da fonte do parágrafo */
+  }
+
+  .container-test .pergunta {
+    font-size: 0.8em; /* Reduz o tamanho da fonte do parágrafo */
+  }
+  .container-test label {
+    font-size: 0.8em; /* Reduz o tamanho da fonte do parágrafo */
+  }
+  .container-test select {
+    font-size: 0.8em; /* Reduz o tamanho da fonte do parágrafo */
+  }
+  .container-test button {
+    font-size: 0.8em; /* Reduz o tamanho da fonte do parágrafo */
+  }
+  .container-test .resultado {
+    font-size: 0.8em; /* Reduz o tamanho da fonte do parágrafo */
+  }
+  .container-test .dica {
+    font-size: 0.8em; /* Reduz o tamanho da fonte do parágrafo */
+  }
+  .container-test strong {
+    font-size: 0.4em; /* Reduz o tamanho da fonte do parágrafo */
+  }
+
+}
+
 /* Footer */
 footer {
   background-color: #07040f;
@@ -519,4 +791,41 @@ footer {
 .footer-content p {
   font-size: 1.2em;
   color: #e2e8f0; /* Cinza claro para boa leitura */
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 10px;
+  }
+
+  .footer-content h2 {
+    font-size: 1.2em;
+  }
+
+  .footer-content p {
+    font-size: 1em;
+  }
+
+  .footer-content img {
+    width: 40px;
+    height: 40px;
+  }
+  .footer-content {
+    gap: 5px;
+  }
+
+ 
+}
+@media screen and (max-width: 600px) {
+  footer {
+    padding: 5px;
+  }
+
+  .footer-content h2 {
+    font-size: 1em;
+  }
+
+  .footer-content p {
+    font-size: 0.8em;
+  }
 }
